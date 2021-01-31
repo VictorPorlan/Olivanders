@@ -69,3 +69,4 @@ class AgedBrie (Item, Updateable):
         else:
             self.setQuality(1)
         self.setSell_in()
+
