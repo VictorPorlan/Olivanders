@@ -56,12 +56,17 @@ class ConjuredItem(Item, Updateable):
         Item.__init__(self, name, sell_in, quality)
     
     # Envejece 2 veces más rápido que los NormalItems
-
+    
     def setSell_in(self):
-        NormalItem.setSell_in()
+        self.sell_in -= 1
 
     def setQuality(self, valor):
-        NormalItem.setQuality(self, valor)
+        if self.quality + valor > 50:
+            self.quality = 50
+        elif self.quality + valor >= 0:
+            self.quality = self.quality + valor
+        else:
+            self.quality = 0
 
     def update_quality(self):
         if self.sell_in > 0:
