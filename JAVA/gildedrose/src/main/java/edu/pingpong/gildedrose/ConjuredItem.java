@@ -1,10 +1,12 @@
 package edu.pingpong.gildedrose;
 
-public class NormalItem implements Updateable{
+import javax.lang.model.element.Name;
 
+public class ConjuredItem implements Updateable{
+    
     private Item item = null;
 
-    NormalItem(String name, int sell_in, int quality){
+    ConjuredItem(String name, int sell_in, int quality){
         this.item = new Item(name, sell_in, quality);
     }
 
@@ -48,10 +50,10 @@ public class NormalItem implements Updateable{
     @Override
     public void updateQuality(){
         if(getSell_in() > 0){
-            setQuality(-1);
+            setQuality(-2);
         }
         else{
-            setQuality(-2);
+            setQuality(-4);
         }
         setSell_in();
     }
