@@ -15,14 +15,23 @@ class Item:
     def __repr__(self):
         return "%s, %s, %s" % (self.name, self.sell_in, self.quality)
 
+    # Esta clase no se puede modificar
 
 class Updateable:
     def update_quality(self):
+        # No se puede modificar la clase Item, entonces usamos esta clase 
+        #   con un método vacío para sobreescribirlo más adelante
         pass
 
 class NormalItem(Item, Updateable):
     def __init__(self, name, sell_in, quality):
         Item.__init__(self, name, sell_in, quality)
+
+    # La calidad de un artículo nunca es negativa
+    # La calidad no puede ser más grande de 50
+    # Cada día que pasa, los items envejecen
+    # Cada día que pasa, los items pierden 1 de calidad 
+    #   y en el momento en que caducan, pierden 2 de calidad por día
 
     def setSell_in(self):
         self.sell_in -= 1
@@ -37,20 +46,22 @@ class NormalItem(Item, Updateable):
             
     def update_quality(self):
         if self.sell_in > 0:
-            self.Quality(-1)
+            self.setQuality(-1)
         else:
-            self.Quality(-2)
+            self.setQuality(-2)
         self.setSell_in()           
 
-class ConjuredItem(NormalItem):
+class ConjuredItem(Item, Updateable):
     def __init__(self, name, sell_in, quality):
         Item.__init__(self, name, sell_in, quality)
     
+    # Envejece 2 veces más rápido que los NormalItems
+
     def setSell_in(self):
         NormalItem.setSell_in()
 
     def setQuality(self, valor):
-        NormalItem.setQuality(self,valor)
+        NormalItem.setQuality(self, valor)
 
     def update_quality(self):
         if self.sell_in > 0:
@@ -59,14 +70,44 @@ class ConjuredItem(NormalItem):
             self.setQuality(-4)
         self.setSell_in()
 
-class AgedBrie (Item, Updateable):
+class AgedBrie(NormalItem):
     def __init__(self, name, sell_in, quality):
         NormalItem.__init__(self, name, sell_in, quality)
+
+    # Según pasan los días aumenta su calidad
 
     def update_quality(self):
         if self.sell_in > 0:
             self.setQuality(1)
         else:
-            self.setQuality(1)
+            self.setQuality(2)
         self.setSell_in()
 
+class Sulfuras(NormalItem):
+
+    def __init__(self, name, sell_in, quality):
+        NormalItem.__init__(self, name, sell_in, quality)
+
+    def update_quality(self):
+        # Ni se vende ni envejece
+        pass
+
+class Backstage(NormalItem):
+
+    def __init__(self, name, sell_in, quality):
+        NormalItem.__init__(self, name, sell_in, quality)
+    
+    # Aumenta en 2 la calidad cuando quedan 10 días o menos
+    # Aumenta en 3 la calidad cuando quedan 5 días o menos
+    # Cuando caduca, su calidad es 0
+
+    def update_quality(self):
+        if self.sell_in > 10:
+            self.setQuality(1)
+        elif self.sell_in > 5:
+            self.setQuality(2)
+        elif self.sell_in > 0:
+            self.setQuality(3)
+        else:
+            self.quality = 0
+        self.setSell_in()
