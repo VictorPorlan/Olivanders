@@ -1,4 +1,4 @@
-package JAVA.gildedrose.src.test.java.edu.pingpong.gildedrose;
+package edu.pingpong.gildedrose;
 
 import static org.junit.Assert.*;
 

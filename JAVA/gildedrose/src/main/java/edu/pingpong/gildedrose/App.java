@@ -1,4 +1,4 @@
-package JAVA.gildedrose.src.main.java.edu.pingpong.gildedrose;
+package edu.pingpong.gildedrose;
 
 /**
  * Hello world!

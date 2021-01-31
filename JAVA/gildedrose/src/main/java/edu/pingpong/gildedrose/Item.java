@@ -1,4 +1,4 @@
-package JAVA.gildedrose.src.main.java.edu.pingpong.gildedrose;
+package edu.pingpong.gildedrose;
 
 public class Item {
     private final String name;
@@ -9,5 +9,5 @@ public class Item {
         this.name = name;
         this.sell_in = sell_in;
         this.quality = quality;
-    };
+    }
 }
