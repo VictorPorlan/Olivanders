@@ -1,4 +1,4 @@
-package edu.pingpong.gildedrose.domain;
+package edu.pingpong.gildedrose;
 
 public class AgedBrie extends NormalItem{
     public AgedBrie(String name, int sell_in, int quality){

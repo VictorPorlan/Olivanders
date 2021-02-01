@@ -1,4 +1,4 @@
-package edu.pingpong.gildedrose.domain;
+package edu.pingpong.gildedrose;
 
 public interface Updateable{
     public void updateQuality();

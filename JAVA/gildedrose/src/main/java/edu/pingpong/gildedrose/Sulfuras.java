@@ -1,4 +1,4 @@
-package edu.pingpong.gildedrose.domain;
+package edu.pingpong.gildedrose;
 
 public class Sulfuras extends NormalItem{
     public Sulfuras(String name, int sell_in, int quality){
