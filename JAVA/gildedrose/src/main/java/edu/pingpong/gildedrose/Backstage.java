@@ -20,3 +20,4 @@ public class Backstage extends NormalItem{
             setQuality(0);
         }
     }
+}
