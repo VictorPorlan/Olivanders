@@ -1,4 +1,4 @@
-package edu.pingpong.gildedrose;
+package edu.pingpong.gildedrose.domain;
 
 public class Sulfuras extends NormalItem{
     public Sulfuras(String name, int sell_in, int quality){
@@ -7,5 +7,6 @@ public class Sulfuras extends NormalItem{
 
     @Override
     public void updateQuality() {
+        //para que no salte el fallo
     }
 }

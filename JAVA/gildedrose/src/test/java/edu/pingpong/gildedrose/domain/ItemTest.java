@@ -1,10 +1,9 @@
-package edu.pingpong.gildedrose;
+package edu.pingpong.gildedrose.domain;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import jdk.jfr.Timestamp;
 
 public class ItemTest {
 

@@ -1,4 +1,4 @@
-package edu.pingpong.gildedrose;
+package edu.pingpong.gildedrose.domain;
 
 public class Backstage extends NormalItem{
     public Backstage(String name, int sell_in, int quality){

@@ -1,4 +1,4 @@
-package edu.pingpong.gildedrose;
+package edu.pingpong.gildedrose.domain;
 
 import static org.junit.Assert.*;
 

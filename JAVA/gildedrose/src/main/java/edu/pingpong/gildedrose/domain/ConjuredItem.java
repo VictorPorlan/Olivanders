@@ -1,4 +1,4 @@
-package edu.pingpong.gildedrose;
+package edu.pingpong.gildedrose.domain;
 
 import javax.lang.model.element.Name;
 
@@ -40,7 +40,7 @@ public class ConjuredItem implements Updateable{
             item.setQuality(50);
         }
         else if(getQuality() + valor >= 0){
-            item.setQuality(getQuality + valor);
+            item.setQuality(getQuality() + valor);
         }
         else{
             item.setQuality(0);

@@ -1,4 +1,4 @@
-package edu.pingpong.gildedrose;
+package edu.pingpong.gildedrose.domain;
 
 public class AgedBrie extends NormalItem{
     public AgedBrie(String name, int sell_in, int quality){
@@ -6,8 +6,8 @@ public class AgedBrie extends NormalItem{
     }
 
     @Override
-    public void upadateQuality() {
-        if(sell_in > 0){
+    public void updateQuality() {
+        if(getSell_in() > 0) {
             setQuality(1);
         }
         else{

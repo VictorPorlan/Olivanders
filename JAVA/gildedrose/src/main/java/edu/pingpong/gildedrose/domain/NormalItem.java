@@ -1,4 +1,4 @@
-package edu.pingpong.gildedrose;
+package edu.pingpong.gildedrose.domain;
 
 public class NormalItem implements Updateable{
 
@@ -38,7 +38,7 @@ public class NormalItem implements Updateable{
             item.setQuality(50);
         }
         else if(getQuality() + valor >= 0){
-            item.setQuality(getQuality + valor);
+            item.setQuality(getQuality() + valor);
         }
         else{
             item.setQuality(0);
