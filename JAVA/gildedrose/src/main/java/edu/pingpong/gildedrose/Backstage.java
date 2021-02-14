@@ -7,17 +7,18 @@ public class Backstage extends NormalItem{
     @Override
     public void updateQuality() {
         if (getSell_in() > 10) {
-            setQuality(1);
+            computeQuality(1);
         }
         else if (getSell_in() > 5){
-            setQuality(2);
+            computeQuality(2);
         }
 
         else if (getSell_in() > 0){
-            setQuality(3);
+            computeQuality(3);
         }
         else {
-            setQuality(0);
+            computeQuality(0);
         }
+        setSell_in();
     }
 }

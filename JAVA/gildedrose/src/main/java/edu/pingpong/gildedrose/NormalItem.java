@@ -33,7 +33,7 @@ public class NormalItem implements Updateable{
         return item.getQuality();
     }
 
-    void setQuality(int valor){
+    void computeQuality(int valor){
         if(getQuality() + valor > 50){
             item.setQuality(50);
         }
@@ -48,10 +48,10 @@ public class NormalItem implements Updateable{
     @Override
     public void updateQuality(){
         if(getSell_in() > 0){
-            setQuality(-1);
+            computeQuality(-1);
         }
         else{
-            setQuality(-2);
+            computeQuality(-2);
         }
         setSell_in();
     }

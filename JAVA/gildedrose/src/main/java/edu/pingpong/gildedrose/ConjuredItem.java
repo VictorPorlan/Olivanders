@@ -1,7 +1,5 @@
 package edu.pingpong.gildedrose;
 
-import javax.lang.model.element.Name;
-
 public class ConjuredItem implements Updateable{
     
     private Item item = null;
@@ -35,7 +33,7 @@ public class ConjuredItem implements Updateable{
         return item.getQuality();
     }
 
-    void setQuality(int valor){
+    void computeQuality(int valor){
         if(getQuality() + valor > 50){
             item.setQuality(50);
         }
@@ -50,10 +48,10 @@ public class ConjuredItem implements Updateable{
     @Override
     public void updateQuality(){
         if(getSell_in() > 0){
-            setQuality(-2);
+            computeQuality(-2);
         }
         else{
-            setQuality(-4);
+            computeQuality(-4);
         }
         setSell_in();
     }

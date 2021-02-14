@@ -8,10 +8,10 @@ public class AgedBrie extends NormalItem{
     @Override
     public void updateQuality() {
         if(getSell_in() > 0) {
-            setQuality(1);
+            computeQuality(1);
         }
         else{
-            setQuality(2);
+            computeQuality(2);
         }
         setSell_in();
     }
