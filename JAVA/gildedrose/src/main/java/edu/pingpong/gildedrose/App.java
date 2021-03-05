@@ -1,5 +1,7 @@
 package edu.pingpong.gildedrose;
 
+import java.util.List;
+
 public class App {
     public static void main(String[] args) {
 
@@ -48,7 +50,7 @@ public class App {
          * Add it to the inventory: 
          * polimorphism in action
          */
-        shop.addItem(new Conjured("Conjured Mana Cake", 3, 6));
+        shop.addItem(new ConjuredItem("Conjured Mana Cake", 3, 6));
         System.out.println("\t ####  New item conjured added ####");
         System.out.println(shop.toString());
 
