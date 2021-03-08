@@ -1,2 +1,4 @@
 # Olivanders
-Proyecto olivanders en parejas
+Este programa con temática de Harry Potter maneja el inventario de la tienda Gilded Rose, una tienda de varitas (y en este caso de muchas más cosas). Los objetos tienen un SELL-IN (fecha de caducidad) y una QUALITY (calidad) y ambas estadisticas bajan en 1 cada día, y si la fecha de caducidad llega a 0 la calidad empieza a bajar 2 cada día. Esta es la norma base para los objetos normales, pero en esta tienda existe una gran variedad de objetos, como los legendarios, que no bajan en calidad ni sell-in; o el Aged Brie, que su calidad aumenta en 1 cada día, y si su caducidad llega a 0, su calidad empieza a aumentar en 2 cada día.
+
+Este programa son las bases de un proyecto más grande que estamos preparando en este curso en el cual crearemos una API y estará conectado a una base de datos (SQL).
